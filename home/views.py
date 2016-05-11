@@ -3,10 +3,15 @@ from django.shortcuts import render
 
 # Create your views here.
 def contact(request):
+    github_username = "wh01683"
     context = {
         'title': "Contact Me",
         'email': 'whowertoniii@gmail.com',
         'mobile_phone': '+1 (478) 390-2179',
+        'github_username': github_username,
+        'github_link': 'https://github.com/'+github_username,
+        'linkedin_username': "William Howerton",
+        'linkedin_link': "https://www.linkedin.com/in/william-howerton-a7074759?",
     }
     return render(request, 'home/contact.html', context)
 
