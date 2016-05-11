@@ -1,0 +1,9 @@
+{% extends 'general/base.html' %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'general/general.css' %}"/>
+
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+<p>{{ p1 }}</p>
+<p>You may find my contact information <a href="{% url 'home:contact'%}">here</a>.</p>
+{% endblock %}

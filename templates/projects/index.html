@@ -1,0 +1,15 @@
+{% extends 'general/base.html' %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'general/general.css' %}"/>
+{% block title %}Projects{% endblock %}
+{% block content %}
+{% if project_list %}
+    <ul>
+        {% for project in project_list %}
+            <li><a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
+{% endblock %}
