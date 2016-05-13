@@ -1,0 +1,17 @@
+{% extends 'general/base.html' %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'general/general.css' %}"/>
+{% block title %}Skills{% endblock %}
+{% block content %}
+{% if skill_list %}
+    <ul>
+        {% for skill in skill_list %}
+            <li>{{ skill.name }} <span class="stars" title="{{ skill.rating }}">
+                <span style="width: calc({{ skill.rating }}/5*100%)"/>
+            </span></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No skills are available.</p>
+{% endif %}
+{% endblock %}

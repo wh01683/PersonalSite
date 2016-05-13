@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponse
-from .models import Project, ProjectSkill
+from .models import Project, ProjectSkill, Skill
 # Create your views here.
 
 
@@ -20,3 +20,12 @@ def detail(request, project_id):
         'project_skill_list': project_skill_list
     }
     return render(request, 'projects/detail.html', context)
+
+
+def skills(request):
+    skill_list = get_list_or_404(Skill)
+    context = {
+        'skill_list': skill_list,
+    }
+
+    return render(request, 'projects/skills.html', context)

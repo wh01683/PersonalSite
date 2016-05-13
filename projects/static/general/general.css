@@ -31,3 +31,14 @@ a:link {
 a:visited {
     color: #417C81;
 }
+
+span.stars, span.stars span {
+    display: inline-block;
+    background: url(../images/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
