@@ -1,4 +1,4 @@
-header {
+#header {
     color:black;
     font-size: 2.5em;
     height: 15%;
@@ -6,4 +6,27 @@ header {
     background: #FFFFFA;
     font-style: normal;
     font-family: "LM Roman Caps 10";
+}
+
+#page_container {
+
+}
+
+#sidebar {
+    float: right;
+    color: black;
+    font-size: 1em;
+    padding-top: 5%;
+    background-color: #FFFFFA;
+    font-style: normal;
+    width: 15%;
+    height: 100%;
+
+}
+
+.wrapper {
+    background-color: #FFFFFA;
+    height: auto;
+    display: block;
+    width: 100%;
 }

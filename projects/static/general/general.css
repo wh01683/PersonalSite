@@ -31,11 +31,3 @@ a:link {
 a:visited {
     color: #417C81;
 }
-
-.wrapper {
-    background-color: #FFFFFA;
-    height: auto;
-    overflow: auto;
-    display: block;
-    width: 100%;
-}

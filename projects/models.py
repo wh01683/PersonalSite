@@ -5,9 +5,11 @@ import datetime
 
 class Project(models.Model):
     title = models.CharField(max_length=300)
-    description = models.CharField(max_length=300)
+    description = models.TextField()
     date_started = models.DateField()
     date_completed = models.DateField(null=True)
+    problems_solved = models.TextField(default="")
+    lessons_learned = models.TextField(default="")
 
     def __str__(self):
         return self.title
@@ -24,15 +26,10 @@ class Skill(models.Model):
         return self.name
 
 
-class ProjectSkillList(models.Model):
-    skills_used = models.ManyToManyField(Project, through='ProjectSkill')
-
-
 class ProjectSkill(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
-    skill_list = models.ForeignKey(ProjectSkillList, on_delete=models.CASCADE)
-    reason_used = models.CharField(max_length=300)
+    reason_used = models.TextField()
 
     def __str__(self):
         return self.project.__str__() + " required " + self.skill.__str__()

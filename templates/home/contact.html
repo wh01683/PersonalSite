@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'general/general.css' %}"/>
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
-<p>e-mail: {{ email }}</p>
+<p>e-mail: <a href="mailto:{{ email }}">{{ email }}</a></p>
 <p>mobile: {{ mobile_phone }}</p>
 <p>github: <a href="{{ github_link }}">{{ github_username}} </a></p>
 <p>linkedin: <a href="{{ linkedin_link }}">{{ linkedin_username}} </a></p>
