@@ -1,0 +1,9 @@
+.comment {
+    background-color: ivory;
+    border: solid dimgray medium;
+    border-radius: 5px;
+}
+
+.commenter{
+    font-size: 1em;
+}

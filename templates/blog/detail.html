@@ -1,0 +1,22 @@
+{% extends 'general/base.html' %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'general/general.css' %}"/>
+{% block title %}{{ post.title }}{% endblock %}
+<h3>Posted on {{ post.pub_date }}</h3>
+{% block content %}
+    <p>{{ post.post_text }}</p>
+
+    <h2>Comments</h2>
+    <ul>
+        {% if comment_list %}
+            {% for comment in comment_list %}
+                <li><div class="commenter">{{ comment.commenter_name }} ({{ comment.commenter_ip }}) said on {{ comment.pub_date }}:</div>
+                <br/>
+                <div class="comment">{{ comment.comment_text }}</div>
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>No comments found for {{ comment.title }}.</p>
+        {% endif %}
+    </ul>
+{% endblock %}

@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-from django.http import HttpResponse
 from .models import Project, ProjectSkill, Skill
 # Create your views here.
 
