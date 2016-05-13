@@ -7,5 +7,5 @@ urlpatterns = [
     # ex: /blog/
     url(r'^$', views.index, name='index'),
     # ex: /blog/5/
-    url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^(?P<post_id>[0-9]+)/$', views.detail, name='detail'),
 ]
